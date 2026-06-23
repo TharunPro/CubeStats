@@ -2,7 +2,10 @@ import pandas as pd
 import io
 
 def load_solves(file) -> pd.DataFrame:
-    df = pd.read_csv(io.BytesIO(file), sep=";", skiprows=0)
+    raw = file if isinstance(file, bytes) else file.read()
+    sample = raw[:500].decode("utf-8", errors="ignore")
+    sep = ";" if ";" in sample else ","
+    df = pd.read_csv(io.BytesIO(raw), sep=sep, skiprows=0)
     df.columns = ["no", "time", "comment", "scramble", "date", "penalty"]
     df = df[~df["time"].str.startswith("DNF")].copy()
     df["seconds"] = df["time"].apply(parse_time)
