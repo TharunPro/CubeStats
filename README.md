@@ -1,5 +1,4 @@
-Here's the updated README:
-markdown# CubeStats ⚡
+CubeStats ⚡
 A personal speedcubing analytics dashboard built with Python and Streamlit.
 Upload your csTimer solve history and instantly get detailed stats, charts and insights about your progression.
 
