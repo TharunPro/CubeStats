@@ -12,9 +12,9 @@ if uploaded:
 
 pages = {
     "My Cubing Stats": [
-        st.Page("pages/overview.py", title="Overview", default=True),
-        st.Page("pages/progression.py", title="Progression"),
-        st.Page("pages/insights.py", title="Insights"),
+        st.Page("pages/overview.py", title="📊 Overview", default=True),
+        st.Page("pages/progression.py", title="📈 Progression"),
+        st.Page("pages/insights.py", title="🔍 Insights"),
     ]
 }
     
