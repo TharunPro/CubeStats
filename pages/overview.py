@@ -11,6 +11,8 @@ if "file" not in st.session_state:
 
 st.title("Overview")
 
+# Metrics
+
 df = load_solves(st.session_state["file"])
 
 col1, col2 = st.columns(2)
